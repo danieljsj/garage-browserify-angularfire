@@ -23,7 +23,7 @@ want to include additional npm dependencies, make sure to use `require`.
 ### The Task
 
 * Build a single-page application which leverages [ui-router](https://github.com/angular-ui/ui-router) with 3 main states: Login, 
-Sign Up, and Dashboard.
+Sign Up, and Account.
 
 * Login and Sign Up need not connect to any backend. Use a **service** to return a mock server response.
 
@@ -32,9 +32,9 @@ Sign Up, and Dashboard.
 * Login should accept a username/password combo of bookbottles/showcase. Anything else should be rejected 
 with appropriate error messages.
 
-* The dashboard should only be accessible after a user has signed up or logged in.
+* The account should only be accessible after a user has signed up or logged in.
 
-* The dashboard should retrieve and display simple data from any web API of your choice. Use 
+* The account should retrieve and display simple data from any web API of your choice. Use 
 a **service** as an API wrapper and use at least one custom **directive** to display data.
 
 * Bonus points awarded if your data comes from a [Firebase](https://www.firebase.com/) instance.

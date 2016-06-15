@@ -1,14 +1,14 @@
 'use strict';
 
-module.exports = DashboardCtrl; 
+module.exports = AccountCtrl; 
 
 /**
  * @ngInject
  */
 
-DashboardCtrl.$inject = ['UserService'];
+AccountCtrl.$inject = ['UserService'];
 
-function DashboardCtrl(UserService) { 
+function AccountCtrl(UserService) { 
 
     var vm = this; 
 

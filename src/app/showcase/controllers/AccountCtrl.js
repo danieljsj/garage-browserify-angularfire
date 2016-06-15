@@ -1,13 +1,13 @@
 'use strict';
 
-module.exports = DashboardCtrl; 
+module.exports = AccountCtrl; 
 
 /**
  * @ngInject
  */
 
-DashboardCtrl.$inject = ['UserService','ChatService']; 
-function DashboardCtrl(   UserService,  ChatService) { 
+AccountCtrl.$inject = ['UserService','ChatService']; 
+function AccountCtrl(   UserService,  ChatService) { 
 
 	console.log(UserService, ChatService);
 

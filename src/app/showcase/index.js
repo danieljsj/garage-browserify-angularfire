@@ -12,7 +12,7 @@ require('angular')
     .config(require('./config'))
     .config(require('./route'))
     .factory('ChatService', require('./services/ChatService'))
-    .controller('DashboardCtrl', require('./controllers/DashboardCtrl'))
+    .controller('AccountCtrl', require('./controllers/AccountCtrl'))
     .controller('HomeCtrl', require('./controllers/HomeCtrl'))
 
 

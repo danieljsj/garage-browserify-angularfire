@@ -13,10 +13,10 @@ function route($stateProvider) {
             template: require('./templates/home.tpl.jade'),
             controller: 'HomeCtrl as vm'
         })
-        .state('dashboard', {
-            url: '/dashboard',
-            template: require('./templates/dashboard.tpl.jade'),
-            controller: 'DashboardCtrl as vm'
+        .state('account', {
+            url: '/account',
+            template: require('./templates/account.tpl.jade'),
+            controller: 'AccountCtrl as vm'
         })
     ;
 }
