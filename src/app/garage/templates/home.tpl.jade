@@ -7,8 +7,8 @@ block content
 			center 
 				//- h1 Friendly &amp; Fun Chat Room
 				//- hr
-				.home-avatars.row
-					.auth-prompt(ng-show="! vm.userIsLoggedIn()")
+				.home.row
+					.auth(ng-show="! vm.userIsLoggedIn()")
 						.col-xs-1
 						.col-xs-5
 							a(href="/signup")
@@ -19,13 +19,30 @@ block content
 								//- img.avatar.panel(src="https://api.adorable.io/avatars/450/rebekah@test.com")
 								h2 Log In
 						.col-xs-1
-					.trigger-prompt(ng-show="vm.userIsLoggedIn()")
-						.col-xs-4
-						.col-xs-4
+					.triggering(ng-show="vm.userIsLoggedIn()")
+						.controls.col-xs-4
 							h2 Open that garage, yo! (coming soon)
+							button(ng-click="vm.addTriggering()") Open it!
 							//- a(href="/account")
 								img.avatar.panel(src="https://api.adorable.io/avatars/450/{{vm.getCurrentUser().email}}")
 								h3 Go to Chat Account
-						.col-xs-4
+						.log.col-xs-4
+							h2 Recent Garage-Openings:
+
+							//- div(ng-repeat="m in vm.getChatMessagesReadonly()")
+							hr
+							br
+							.panel.message(
+								ng-repeat="t in vm.triggerings | orderBy:'-timestamp'"
+								ng-if="t.timestamp"
+								ng-class="{mine:t.senderEmail == vm.getCurrentUser().email}"
+							)
+								.panel-body
+									p.text {{t.text}}
+									hr
+									//- img.avatar.panel(src="https://api.adorable.io/avatars/50/{{t.senderEmail}}")
+									b.senderEmail {{t.senderEmail}}
+									br
+									span.timestamp {{t.timestamp | date:'EEE MMM d, y @ h:mm a'}}
 				hr
 				p (app under construction)

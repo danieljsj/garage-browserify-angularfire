@@ -12,6 +12,7 @@ require('angular')
     .config(require('./config'))
     .config(require('./route'))
     .factory('ChatService', require('./services/ChatService'))
+    .factory('TriggeringService', require('./services/TriggeringService'))
     .controller('AccountCtrl', require('./controllers/AccountCtrl'))
     .controller('HomeCtrl', require('./controllers/HomeCtrl'))
 

@@ -1,14 +1,13 @@
 'use strict';
 
-module.exports = AccountCtrl; 
+module.exports = HomeCtrl; 
 
 /**
  * @ngInject
  */
 
-AccountCtrl.$inject = ['UserService'];
-
-function AccountCtrl(UserService) { 
+HomeCtrl.$inject = ['UserService','TriggeringService'];
+function HomeCtrl(UserService,  TriggeringService) { 
 
     var vm = this; 
 
@@ -18,6 +17,7 @@ function AccountCtrl(UserService) {
     vm.getCurrentUserJSON = UserService.getCurrentUserJSON;
 
     // controller-specific:
-
+    vm.triggerings = TriggeringService.triggerings;
+    vm.addTriggering = TriggeringService.addTriggering;
 
 }
