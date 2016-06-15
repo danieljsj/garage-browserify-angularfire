@@ -1,0 +1,26 @@
+extends ./layout.tpl.jade
+
+block content
+
+	// https://getbootstrap.com/examples/signin/
+	form.form-signin
+		img.avatar.panel(src="https://api.adorable.io/avatars/450/{{vm.email || 'rebekah@test.com'}}")
+		h2.form-signin-heading Log in:
+
+		label.sr-only(for="inputEmail") Email address
+		input.form-control(type="email", id="inputEmail", ng-model="vm.email" placeholder="Email address", required="", autofocus="", autocomplete="off")
+
+		label.sr-only(for="inputPassword") Password
+		input.form-control(type="password", id="inputPassword", ng-model="vm.password" placeholder="Password", required="", autocomplete="off")
+
+		//- div.checkbox
+			label
+				input( type="checkbox", value="remember-me")
+				span Remember me
+
+		button.btn.btn-lg.btn-primary.btn-block(type="submit", ng-click='vm.login({email:vm.email, password:vm.password})') Log me in
+		br
+		.alert.alert-danger(ng-show="vm.loginError.message") {{vm.loginError.message}}
+
+
+// TODO: Password Reset - https://www.firebase.com/docs/web/api/firebase/resetpassword.html

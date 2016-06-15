@@ -1,0 +1,58 @@
+#header
+    // Fixed navbar
+    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') <b>MonsterChat</b> | because... monsters.
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            //- li.active-NOT
+              a(href='/') Home
+            //- li
+              a(href='/about') About*
+            //- li
+              a(href='/contact') Contact*
+            //- li.dropdown
+              a.dropdown-toggle(href='/', data-toggle='dropdown')
+                | Dropdown *
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='/') Action*
+                li
+                  a(href='/') Another action*
+                li
+                  a(href='/') Something else here*
+                li.divider
+                li.dropdown-header Nav header*
+                li
+                  a(href='/') Separated link*
+                li
+                  a(href='/') One more separated link*
+          ul.nav.navbar-nav.navbar-right
+            // TODO: figure out how to get ui-sref to also work inside the 'signup' module -- documentation here: http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.$state#methods_go
+            li
+              a(href="/signup", ng-if="! vm.userIsLoggedIn()") Sign up
+              //- a(ui-sref="signup") Sign up
+            li
+              a(href="/login", ng-if="! vm.userIsLoggedIn()") Log in
+              //- a(ui-sref="login") Log in
+            li.active-NOT
+              a(href="/dashboard", ng-if="vm.userIsLoggedIn()") Dashboard
+              //- a(ui-sref="dashboard") Dashboard
+        // /.nav-collapse
+    // /.navbar.navbar-default.navbar-fixed-top
+// /#header
+#content
+    .container
+      // Main component for a primary marketing message or call to action
+      .jumbotron
+        block content
+            p error; please add a content block to your layout!
+    // /container
+// /#content

@@ -1,0 +1,27 @@
+doctype html
+html(ng-app='bookbottles.showcase', ng-strict-di)
+    head
+        base(href='/')
+        meta(name='fragment', content='!')
+        title DSJ BookBottles Showcase
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', type='text/css', href='assets/' + cssFile)
+    body
+        div(id="btn-digest" ng-hide="true" ng-click="")
+        div(ui-view)
+            // note: this is where crazy ng-magic happens. ui-view, which maybe is a part of ui-router or something, brings in all our view code, which is hooked up to the controllers and such.
+            // note: html I write compiles to: buf.push("<h1>trololo i am a dashboard</h1>");;return buf.join("");
+            // TODO:QN: WHAT IS TELLING BROWSERIFY HOW TO PUT EVERYTHING TOGETHER; WHERE TO FIND OUR src/index.jade, or 'less' STUFF.
+
+
+        script(type='text/javascript', src='assets/' + jsFile)
+
+        //if lte IE 9
+          script(src='https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js')
+
+        script(type='text/javascript')
+            | (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            | (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            | m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            | })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            | ga('create', '!{gaId}', '!{ gaLocal ? 'none' : 'auto' }');

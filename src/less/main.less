@@ -1,0 +1,54 @@
+@import "../../node_modules/bootstrap/less/bootstrap";
+
+@import "./bootstrap-signin";
+
+img {
+	max-width: 100%;
+}
+hr {
+	border-color: rgb(238, 238, 238);
+	border-color: rgba(138, 138, 138, .2);
+}
+body {
+  background: #eeeeee;
+}
+
+@base-blue: #B7E3F7;
+@light-blue: @base-blue + #211;
+
+@base-gray: #C0C0C0;
+@light-gray: @base-gray + #211;
+
+@message-offset: 30px;
+
+@avatar-spacing:15px;
+
+#chat {
+	.message {
+		margin-right: @message-offset;
+		border-color: @light-gray;
+		img.avatar {
+			float:left;	
+			margin: 0 @avatar-spacing 0 0;
+		}
+		&.mine {
+			text-align: right;
+			margin-right: 0;
+			margin-left: @message-offset;
+			background-color: @light-blue;
+			border-color: @base-blue;
+			img.avatar {
+				float:right;
+				margin: 0 0 0 @avatar-spacing;
+			}
+		}
+	}
+}
+
+.avatar.panel {
+	border-radius:10%
+}
+
+.home-avatars .avatar.panel{
+	margin:0;
+}
