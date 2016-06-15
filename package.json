@@ -1,5 +1,5 @@
 {
-  "name": "bookbottles-showcase",
+  "name": "garage-opener",
   "version": "2.0.1",
   "description": "AngularJS Skill Test",
   "author": "Anid Monsur <anid.monsur@bookbottles.com>",
@@ -50,6 +50,7 @@
   "authors": "Anid Monsur <anid.monsur@bookbottles.com>",
   "repository": "bookbottles/showcase",
   "dependencies": {
-    "angularfire": "^2.0.1"
+    "angularfire": "^2.0.1",
+    "gulp": "https://registry.npmjs.org/gulp/-/gulp-3.9.1.tgz"
   }
 }
