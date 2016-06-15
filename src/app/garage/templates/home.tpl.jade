@@ -1,14 +1,13 @@
 extends ./layout.tpl.jade
 
 block content
-	br
-	.panel
-		.panel-body
-			center 
-				//- h1 Friendly &amp; Fun Chat Room
-				//- hr
-				.home.row
-					.auth(ng-show="! vm.userIsLoggedIn()")
+	//- h1 Friendly &amp; Fun Chat Room
+	//- hr
+	.home
+		#auth(ng-show="! vm.userIsLoggedIn()")
+			.panel
+				center.panel-body
+					.row
 						.col-xs-1
 						.col-xs-5
 							a(href="/signup")
@@ -19,30 +18,32 @@ block content
 								//- img.avatar.panel(src="https://api.adorable.io/avatars/450/rebekah@test.com")
 								h2 Log In
 						.col-xs-1
-					.triggering(ng-show="vm.userIsLoggedIn()")
-						.controls.col-xs-4
-							h2 Open that garage, yo! (coming soon)
-							button(ng-click="vm.addTriggering()") Open it!
-							//- a(href="/account")
-								img.avatar.panel(src="https://api.adorable.io/avatars/450/{{vm.getCurrentUser().email}}")
-								h3 Go to Chat Account
-						.log.col-xs-4
-							h2 Recent Garage-Openings:
-
-							//- div(ng-repeat="m in vm.getChatMessagesReadonly()")
-							hr
-							br
-							.panel.message(
-								ng-repeat="t in vm.triggerings | orderBy:'-timestamp'"
-								ng-if="t.timestamp"
-								ng-class="{mine:t.senderEmail == vm.getCurrentUser().email}"
-							)
-								.panel-body
-									p.text {{t.text}}
-									hr
-									//- img.avatar.panel(src="https://api.adorable.io/avatars/50/{{t.senderEmail}}")
-									b.senderEmail {{t.senderEmail}}
-									br
-									span.timestamp {{t.timestamp | date:'EEE MMM d, y @ h:mm a'}}
-				hr
-				p (app under construction)
+		#triggerings(ng-show="vm.userIsLoggedIn()")
+			center
+				//- .panel
+					//- .panel-body
+						//- h4 Garage Controls:
+				br
+				button.btn.btn-primary.btn-lg(ng-click="vm.addTriggering()") Trigger Garage Door
+				//- a(href="/account")
+					img.avatar.panel(src="https://api.adorable.io/avatars/450/{{vm.getCurrentUser().email}}")
+					h3 Go to Chat Account
+				br
+				br
+				br
+				//- br
+				br
+				h4 Recent:
+				.triggering(
+					ng-repeat="t in vm.triggerings | orderBy:'-timestamp'"
+					ng-if="t.timestamp"
+					ng-class="{mine:t.senderEmail == vm.getCurrentUser().email}"
+				)
+					.panel-body-NOT
+						//- p.text {{t.text}}
+						//- hr
+						hr(style="width:300px; margin:20px auto;")
+						img.avatar.panel(src="https://api.adorable.io/avatars/50/{{t.senderEmail}}")
+						br
+						code.timestamp {{t.timestamp | date:'EEE MMM d, y @ h:mm:ss a'}}
+						h5.senderEmail {{t.senderEmail}}
