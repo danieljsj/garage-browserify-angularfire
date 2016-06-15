@@ -1,7 +1,5 @@
 'use strict';
 
-console.log("DSLFKJASDLFJASDKLFJASLKFJASLKJFSALKJFASKLJFSAL");
-
 module.exports = ChatService;
 
 ChatService.$inject = ['UserService','$rootScope','$timeout']; // theoretically I should be injecting angular references instead of just calling the global angular (which I'm also doign in UserService) but I haven't yet found good documentation on using the new firebase within RequireJS/Require() etc.
