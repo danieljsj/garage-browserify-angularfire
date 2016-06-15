@@ -5,7 +5,7 @@ module.exports = TriggeringService;
 TriggeringService.$inject = ['UserService','$rootScope','$timeout']; // theoretically I should be injecting angular references instead of just calling the global angular (which I'm also doign in UserService) but I haven't yet found good documentation on using the new firebase within RequireJS/Require() etc.
 function TriggeringService(   UserService,  $rootScope,  $timeout){
 	
-	var triggeringsRef = firebase.database().ref('triggerings');
+	var triggeringsRef = firebase.database().ref('triggerings'); // 'firebase' was initialized in UserService. (TODO: should probably be injected)
 	
 	triggeringsRef.on('child_added',function(snapshot){
 		console.log(snapshot.val());

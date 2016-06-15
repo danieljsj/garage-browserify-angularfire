@@ -13,10 +13,10 @@ function UserService($state,$rootScope) {
 
   // this could go a number of places; for now I'm putting in in UserService since it's related.
   var config = {
-    apiKey: "AIzaSyBEZ7BgDeiduYGtIHiJeRfMELL1FW_LUX8", // public; okay to include in the repo.
-    authDomain: "project-3791362246439473857.firebaseapp.com",
-    databaseURL: "https://project-3791362246439473857.firebaseio.com",
-    storageBucket: "project-3791362246439473857.appspot.com",
+    apiKey: "AIzaSyBnXMBIc-U2pFCBR8KBAZy0Is99UPZpzWE", // public key, okay to include in repo.
+    authDomain: "garage-67a27.firebaseapp.com",
+    databaseURL: "https://garage-67a27.firebaseio.com",
+    storageBucket: "garage-67a27.appspot.com",
   };
   firebase.initializeApp(config);
 
