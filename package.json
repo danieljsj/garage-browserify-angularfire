@@ -48,7 +48,7 @@
   "license": "UNLICENSED",
   "private": true,
   "authors": "Anid Monsur <anid.monsur@bookbottles.com>",
-  "repository": "bookbottles/showcase",
+  "repository": "bookbottles/garage",
   "dependencies": {
     "angularfire": "^2.0.1",
     "gulp": "https://registry.npmjs.org/gulp/-/gulp-3.9.1.tgz"

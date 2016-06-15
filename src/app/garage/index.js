@@ -1,7 +1,7 @@
 'use strict';
 
 require('angular')
-    .module('bookbottles.showcase', [
+    .module('bookbottles.garage', [
         /* 3rd Party */
         require('angular-ui-router'),
         require('angularfire'),

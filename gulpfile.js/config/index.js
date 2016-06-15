@@ -14,7 +14,7 @@ module.exports = {
         ' */',
         ''].join('\n'))({pkg: pkg}),
     entry: {
-        js: 'src/app/showcase/index.js',
+        js: 'src/app/garage/index.js',
         less: 'src/less/main.less'
     },
     source: {

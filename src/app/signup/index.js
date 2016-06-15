@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = require('angular')
-    .module('bookbottles.showcase.signup', [ 
+    .module('bookbottles.garage.signup', [ 
     	/* 3rd Party */
         require('angular-ui-router'),
         require('angularfire'),

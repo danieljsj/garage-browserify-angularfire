@@ -1,6 +1,6 @@
-# AngularJS Skill Showcase
+# AngularJS Skill Garage
 
-The objective of this test is to showcase your AngularJS knowledge by building a simple, single-page application. 
+The objective of this test is to garage your AngularJS knowledge by building a simple, single-page application. 
 The parameters of this test will be fairly open-ended, with a few specific requirements to demonstrate your Javascript 
 prowess.
 
@@ -29,7 +29,7 @@ Sign Up, and Account.
 
 * The Sign Up page should require a username, password, and password confirmation.
 
-* Login should accept a username/password combo of bookbottles/showcase. Anything else should be rejected 
+* Login should accept a username/password combo of bookbottles/garage. Anything else should be rejected 
 with appropriate error messages.
 
 * The account should only be accessible after a user has signed up or logged in.
